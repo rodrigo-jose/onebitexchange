@@ -15,7 +15,7 @@ body {
   
   
   .title-box{
-    margin-top: 20%;
+    margin-top: unset;
   
     .title{
       color: white;
@@ -26,16 +26,18 @@ body {
       color: white;
       text-shadow: 3px 0px 3px #000000;
       font-size: 30px;
-      margin-left: 10px;
+      margin-left: 340px;
       margin-right: 10px;
+      padding-top: 30px;
+      font-family: monospace;
+      text-align: -webkit-center;
     }
   }
   
+  .logo_box{
+    margin-left: 240px;
+  }
    
   .exchange_box{
     margin: 10px auto;
-    .logo-box{
-      margin: 0 auto;
-      padding-bottom: 10px;
-    }
   }
