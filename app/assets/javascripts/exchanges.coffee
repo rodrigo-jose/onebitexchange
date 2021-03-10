@@ -1,8 +1,9 @@
 $(document).ready ->
- 
-  $('form').submit ->
-    if $('form').attr('action') == '/convert'
-      $.ajax '/convert',
+  $('input[type=number]').on 'keyup change', ->
+    $('form').submit ->
+    console.log("teste")
+    # if $('form').attr('action') == '/convert'
+    $.ajax '/convert',
           type: 'GET'
           dataType: 'json'
           data: {
@@ -15,3 +16,4 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false
+  
