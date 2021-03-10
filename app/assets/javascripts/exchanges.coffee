@@ -1,8 +1,6 @@
 $(document).ready ->
-  $('input[type=number]').on 'keyup change', ->
+  $('#amount, #source_currency, #target_currency').on 'keyup change', ->#
     $('form').submit ->
-    console.log("teste")
-    # if $('form').attr('action') == '/convert'
     $.ajax '/convert',
           type: 'GET'
           dataType: 'json'
