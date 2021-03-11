@@ -1,5 +1,12 @@
 $(document).ready ->
-  $('#amount, #source_currency, #target_currency').on 'keyup change', ->#
+  
+  $('#invert').click ->
+    source = $("#target_currency").val()
+    target = $("#source_currency").val()
+    $("#source_currency").val(source)
+    $("#target_currency").val(target)
+
+  $('#amount, #source_currency, #target_currency, #invert').on 'keyup change click', ->#
     $('form').submit ->
     $.ajax '/convert',
           type: 'GET'
@@ -14,4 +21,8 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false
+  
+
+
+
   
